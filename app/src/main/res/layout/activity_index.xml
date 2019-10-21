@@ -7,7 +7,7 @@
     tools:context=".IndexActivity">
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/imageView_index_smalllogo"
         android:layout_width="25dp"
         android:layout_height="33dp"
         android:layout_marginStart="8dp"
@@ -19,56 +19,56 @@
 
     <TextView
         android:id="@+id/textView_index_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="268dp"
+        android:layout_height="26dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
-        android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintStart_toEndOf="@+id/imageView_index_smalllogo"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/imageView_index_haohao"
         android:layout_width="290dp"
         android:layout_height="158dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="52dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_index_name"
         app:srcCompat="@mipmap/haohaoshenghuojizhang" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/imageView_index_yumao"
         android:layout_width="81dp"
         android:layout_height="76dp"
         android:layout_marginTop="6dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton4"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_index_yuezhangdan"
         app:srcCompat="@mipmap/yumao" />
 
     <ImageView
-        android:id="@+id/imageView9"
+        android:id="@+id/imageView_index_biglogo"
         android:layout_width="70dp"
         android:layout_height="65dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="6dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton4"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_index_yuezhangdan"
         app:srcCompat="@mipmap/logo" />
 
     <ImageButton
-        android:id="@+id/imageButton"
-        android:layout_width="289dp"
-        android:layout_height="58dp"
+        android:id="@+id/imageButton_index_jilu"
+        android:background="#00FF0000"
+        android:onClick="jilu"
+        android:layout_width="264dp"
+        android:layout_height="61dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="26dp"
@@ -76,13 +76,14 @@
         android:layout_marginRight="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_index_haohao"
         app:srcCompat="@mipmap/jilunidezhichu" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
-        android:layout_width="178dp"
-        android:layout_height="56dp"
+        android:id="@+id/imageButton_index_xiangxi"
+        android:background="#00FF0000"
+        android:layout_width="145dp"
+        android:layout_height="65dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -90,13 +91,14 @@
         android:layout_marginRight="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_index_jilu"
         app:srcCompat="@mipmap/xiangxizhichu" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
-        android:layout_width="175dp"
-        android:layout_height="62dp"
+        android:id="@+id/imageButton_index_rizhangdan"
+        android:background="#00FF0000"
+        android:layout_width="150dp"
+        android:layout_height="69dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
@@ -104,20 +106,18 @@
         android:layout_marginRight="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_index_xiangxi"
         app:srcCompat="@mipmap/rizhangdan" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
-        android:layout_width="175dp"
-        android:layout_height="63dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:id="@+id/imageButton_index_yuezhangdan"
+        android:background="#00FF0000"
+        android:layout_width="151dp"
+        android:layout_height="68dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_index_rizhangdan"
         app:srcCompat="@mipmap/yuezhangdan" />
 </androidx.constraintlayout.widget.ConstraintLayout>

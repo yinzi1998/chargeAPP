@@ -3,4 +3,6 @@
     <string name="login_name">请输入用户名</string>
     <string name="login_psw1">请输入密码</string>
     <string name="login_psw2">请确认密码</string>
+    <string name="write_detail">具体事项</string>
+    <string name="write_money">支出金额</string>
 </resources>
