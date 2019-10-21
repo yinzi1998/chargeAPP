@@ -58,7 +58,7 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this,"注册成功啦",Toast.LENGTH_SHORT).show();
                     Intent main = new Intent(this,MainActivity.class);
                     Log.i(TAG, "login_login: 注册成功，跳转登录界面");
-                    startActivityForResult(main,1);
+                    startActivity(main);
                 }
             }
         }

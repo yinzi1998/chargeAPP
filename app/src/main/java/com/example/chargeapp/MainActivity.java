@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this,"登录成功啦",Toast.LENGTH_SHORT).show();
                         Intent index = new Intent(this,IndexActivity.class);
                         Log.i(TAG, "main_denglu: 登录成功，跳转起始页");
+                        //用户名传入index界面
+                        index.putExtra("name", userStr);
                         startActivity(index);
                     }
                     else{
