@@ -81,6 +81,7 @@
 
     <ImageButton
         android:id="@+id/imageButton_index_xiangxi"
+        android:onClick="charge_detail"
         android:background="#00FF0000"
         android:layout_width="145dp"
         android:layout_height="65dp"
@@ -96,6 +97,7 @@
 
     <ImageButton
         android:id="@+id/imageButton_index_rizhangdan"
+        android:onClick="charge_day"
         android:background="#00FF0000"
         android:layout_width="150dp"
         android:layout_height="69dp"
@@ -111,6 +113,7 @@
 
     <ImageButton
         android:id="@+id/imageButton_index_yuezhangdan"
+        android:onClick="charge_month"
         android:layout_width="151dp"
         android:layout_height="68dp"
         android:layout_marginStart="8dp"

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ViewPg2Fragment">
+
+    <TextView
+        android:id="@+id/textView_viewpg2_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="#212121"
+        android:textSize="26dp" />
+
+    <ImageView
+        android:id="@+id/imageView_viewpg2_logo"
+        android:layout_width="229dp"
+        android:layout_height="118dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/logo"
+        android:textColor="#212121"
+        android:textSize="26dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginTop="26dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView_viewpg2_most1"
+            android:layout_width="20dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="66dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="你花销最多的是 "
+            android:textColor="#212121"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/imageView_viewpg2_most"
+            android:layout_width="10dp"
+            android:layout_height="58dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="116dp"
+            android:layout_weight="1"
+            android:src="@mipmap/chuan" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="57dp"
+    android:layout_marginTop="36dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/textView_viewpg2_chi1"
+        android:layout_width="2dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="6dp"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:text="你在"
+        android:textColor="#212121"
+        android:textSize="16dp" />
+
+    <ImageView
+        android:id="@+id/imageView_viewpg2_chi"
+        android:layout_width="15dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:src="@mipmap/chi" />
+
+    <TextView
+        android:id="@+id/textView_viewpg2_chi2"
+        android:layout_width="83dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="上花费的百分比为"
+        android:textColor="#212121"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/textView_viewpg2_chi3"
+        android:layout_width="37dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="#b71c1c"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/textView_viewpg2_chi4"
+        android:layout_width="6dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginRight="6dp"
+        android:layout_weight="1"
+        android:gravity="left"
+        android:text="%"
+        android:textColor="#212121"
+        android:textSize="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView_viewpg2_chuan1"
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="6dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="你在"
+            android:textColor="#212121"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/imageView_viewpg2_chuan"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@mipmap/chuan" />
+
+        <TextView
+            android:id="@+id/textView_viewpg2_chuan2"
+            android:layout_width="83dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="上花费的百分比为"
+            android:textColor="#212121"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/textView_viewpg2_chuan3"
+            android:layout_width="37dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="#b71c1c"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/textView_viewpg2_chuan4"
+            android:layout_width="6dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="%"
+            android:textColor="#212121"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView_viewpg2_yong1"
+            android:layout_width="2dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="6dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="你在"
+            android:textColor="#212121"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/imageView_viewpg2_yong"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@mipmap/yong" />
+
+        <TextView
+            android:id="@+id/textView_viewpg2_yong2"
+            android:layout_width="83dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="上花费的百分比为"
+            android:textColor="#212121"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/textView_viewpg2_yong3"
+            android:layout_width="37dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="#b71c1c"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/textView_viewpg2_yong"
+            android:layout_width="6dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="6dp"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="%"
+            android:textColor="#212121"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

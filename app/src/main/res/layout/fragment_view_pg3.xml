@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ViewPg3Fragment">
+
+    <TextView
+        android:id="@+id/textView_viewpg3_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="TextView"
+        android:gravity="center"
+        android:textColor="#212121"
+        android:textSize="26dp"/>
+
+    <ImageView
+        android:id="@+id/imageView_viewpg3_logo"
+        android:layout_width="229dp"
+        android:layout_height="118dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/logo"
+        android:textColor="#212121"
+        android:textSize="26dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView_viewpg3_money"
+            android:layout_width="3dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="56dp"
+            android:layout_marginTop="6dp"
+            android:layout_weight="1"
+            android:src="@mipmap/renminbi" />
+
+        <TextView
+            android:id="@+id/textView_viewpg3_money1"
+            android:layout_width="47dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="你一共支出了  "
+            android:textColor="#212121"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/textView_viewpg3_money2"
+            android:layout_width="7dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="#b71c1c"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/textView_viewpg3_money13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="36dp"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="  元"
+            android:textColor="#212121"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:layout_marginTop="36dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView_viewpg3_chi1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="36dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="你在"
+            android:textColor="#212121"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/imageView_viewpg3_chi"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@mipmap/chi" />
+
+        <TextView
+            android:id="@+id/textView_viewpg3_chi2"
+            android:layout_width="69dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="上一共花费了"
+            android:textColor="#212121"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/textView_viewpg3_chi3"
+            android:layout_width="37dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="#b71c1c"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/textView_viewpg3_chi4"
+            android:layout_width="6dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="56dp"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text=" 元"
+            android:textColor="#212121"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView_viewpg3_chuan1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="36dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="你在"
+            android:textColor="#212121"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/imageView_viewpg3_chuan"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@mipmap/chuan" />
+
+        <TextView
+            android:id="@+id/textView_viewpg3_chuan2"
+            android:layout_width="69dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="上一共花费了"
+            android:textColor="#212121"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/textView_viewpg3_chuan3"
+            android:layout_width="37dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="#b71c1c"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/textView_viewpg3_chuan4"
+            android:layout_width="6dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="56dp"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text=" 元"
+            android:textColor="#212121"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textView_viewpg3_yong1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="36dp"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="你在"
+            android:textColor="#212121"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/imageView_viewpg3_yong"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@mipmap/yong" />
+
+        <TextView
+            android:id="@+id/textView_viewpg3_yong2"
+            android:layout_width="69dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="上一共花费了"
+            android:textColor="#212121"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/textView_viewpg3_yong3"
+            android:layout_width="37dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="#b71c1c"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/textView_viewpg3_yong4"
+            android:layout_width="6dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="56dp"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text=" 元"
+            android:textColor="#212121"
+            android:textSize="16dp" />
+    </LinearLayout>
+
+
+</LinearLayout>

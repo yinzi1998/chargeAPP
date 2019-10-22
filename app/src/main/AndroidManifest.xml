@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WriteChargeActivity"></activity>
+        <activity android:name=".ChargeMonthItemActivity"></activity>
+        <activity android:name=".ChargeMonthListActivity" />
+        <activity android:name=".ChargeDayItemActivity" />
+        <activity android:name=".ChargeDayListActivity" />
+        <activity android:name=".ChargeDetailItemActivity" />
+        <activity android:name=".ChargeDetailListActivity" />
+        <activity android:name=".WriteChargeActivity" />
         <activity android:name=".IndexActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".MainActivity">

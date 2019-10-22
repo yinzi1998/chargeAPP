@@ -15,6 +15,7 @@ import android.widget.Toast;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.TimeZone;
 
 public class WriteChargeActivity extends AppCompatActivity {
     private static final String TAG = "WriteChargeActivity";
@@ -31,9 +32,12 @@ public class WriteChargeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_write_charge);
 
         //获取年月日
-        Date today = Calendar.getInstance().getTime();
+        //直接获取是美国时间，会晚八小时，要设置时区加上八小时
+        TimeZone.setDefault(TimeZone.getTimeZone("GMT+8"));
+        Date today = Calendar.getInstance(TimeZone.getTimeZone("GMT+8")).getTime();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         todayStr = sdf.format(today);
+        Log.i(TAG, "onCreate: 今天的日期是= " + todayStr);
         String[] todayList = todayStr.split("-");
         year = todayList[0];
         month = todayList[1];
