@@ -29,7 +29,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         //创建表
         sqLiteDatabase.execSQL("CREATE TABLE " + TB_LOGIN + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, USERNAME TEXT, PASSWORD TEXT)");
-        sqLiteDatabase.execSQL("CREATE TABLE " + TB_CHARGE + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, DATE TEXT, TYPE TEXT, DETAIL TEXT, MONEY TEXT)");
+        sqLiteDatabase.execSQL("CREATE TABLE " + TB_CHARGE + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, DATE TEXT, TYPE TEXT, DETAIL TEXT, MONEY TEXT)");
     }
 
     //升级数据库的操作

@@ -13,6 +13,7 @@ import com.google.android.material.tabs.TabLayout;
 
 public class ChargeDayItemActivity extends AppCompatActivity {
     private static final String TAG = "ChargeDayItemActivity";
+    private String name;
     private String date;
     private float money_total = 0.0f;
     private float money_chi = 0.0f;
@@ -28,17 +29,20 @@ public class ChargeDayItemActivity extends AppCompatActivity {
         setContentView(R.layout.activity_charge_day_item);
 
         Intent intent = getIntent();
+        name = intent.getStringExtra("name");
         date = intent.getStringExtra("date");
 
         for(DBChargeItem i : manager.showListAll_charge()){
-            if(date.equals(i.getDate())){
-                money_total += Float.parseFloat(i.getMoney());
-                if(i.getType().equals("1")){
-                    money_chi += Float.parseFloat(i.getMoney());
-                }else if(i.getType().equals("2")){
-                    money_chuan += Float.parseFloat(i.getMoney());
-                }else{
-                    money_yong += Float.parseFloat(i.getMoney());
+            if(name.equals(i.getName())){
+                if(date.equals(i.getDate())){
+                    money_total += Float.parseFloat(i.getMoney());
+                    if(i.getType().equals("1")){
+                        money_chi += Float.parseFloat(i.getMoney());
+                    }else if(i.getType().equals("2")){
+                        money_chuan += Float.parseFloat(i.getMoney());
+                    }else{
+                        money_yong += Float.parseFloat(i.getMoney());
+                    }
                 }
             }
         }

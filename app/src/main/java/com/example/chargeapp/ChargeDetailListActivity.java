@@ -17,6 +17,7 @@ import java.util.HashMap;
 //详细支出的列表显示ListView
 public class ChargeDetailListActivity extends AppCompatActivity implements AdapterView.OnItemClickListener, AdapterView.OnItemLongClickListener{
     private static final String TAG = "DetailListActivity";
+    private String name;
     //用于存放详细支出列表的数据，包括date,detail,type,money
     private ArrayList<HashMap<String,String>> ChargeDetailListItems;
     private ListView listView;
@@ -29,14 +30,19 @@ public class ChargeDetailListActivity extends AppCompatActivity implements Adapt
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_charge_detail_list);
 
+        Intent intent = getIntent();
+        name = intent.getStringExtra("name");
+
         ChargeDetailListItems = new ArrayList<HashMap<String, String>>();
         for(DBChargeItem i : manager.showListAll_charge()){
-            HashMap<String, String> map = new HashMap<String, String>();
-            map.put("date" , i.getDate());
-            map.put("type" , i.getType());
-            map.put("detail" , i.getDetail());
-            map.put("money" , i.getMoney());
-            ChargeDetailListItems.add(map);
+            if(name.equals(i.getName())){
+                HashMap<String, String> map = new HashMap<String, String>();
+                map.put("date" , i.getDate());
+                map.put("type" , i.getType());
+                map.put("detail" , i.getDetail());
+                map.put("money" , i.getMoney());
+                ChargeDetailListItems.add(map);
+            }
         }
 
         listView = findViewById(R.id.ListView_charge_detail);

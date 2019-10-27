@@ -19,6 +19,7 @@ import java.util.TimeZone;
 
 public class WriteChargeActivity extends AppCompatActivity {
     private static final String TAG = "WriteChargeActivity";
+    private String name;
     private String todayStr;
     private String year;
     private String month;
@@ -30,6 +31,9 @@ public class WriteChargeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_write_charge);
+
+        Intent intent = getIntent();
+        name = intent.getStringExtra("name");
 
         //获取年月日
         //直接获取是美国时间，会晚八小时，要设置时区加上八小时
@@ -89,13 +93,16 @@ public class WriteChargeActivity extends AppCompatActivity {
         }else if(money==null || money.equals("")){
             Toast.makeText(WriteChargeActivity.this,"别忘了记录花了多少钱哦",Toast.LENGTH_SHORT).show();
         }else{
-            DBChargeItem charge = new DBChargeItem(todayStr, type, detail, money);
+            DBChargeItem charge = new DBChargeItem(name, todayStr, type, detail, money);
+            Log.i(TAG, "done: "+name+","+todayStr+","+type+","+detail+","+money);
             manager.add_charge(charge);
             Log.i(TAG, "done: 插入一条记录到数据库记账表中");
             Toast.makeText(WriteChargeActivity.this,"记账成功啦",Toast.LENGTH_SHORT).show();
             Intent index = new Intent(this,IndexActivity.class);
             Log.i(TAG, "done: 完成记账，返回index界面");
-            startActivity(index);
+            index.putExtra("name", name);
+            setResult(1,index);
+            finish();
         }
 
     }

@@ -15,6 +15,7 @@ import java.util.HashMap;
 public class ChargeDayListActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
     private static final String TAG = "DayListActivity";
+    private String name;
     //用于存放日账单列表的数据
     private ArrayList<HashMap<String,String>> ChargeDayListItems;
     private ListView listView;
@@ -24,20 +25,24 @@ public class ChargeDayListActivity extends AppCompatActivity implements AdapterV
         DBManager manager = new DBManager(ChargeDayListActivity.this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_charge_day_list);
+        Intent intent = getIntent();
+        name = intent.getStringExtra("name");
         int tab = 0;
         String temp_date = "";
 
         ChargeDayListItems = new ArrayList<HashMap<String, String>>();
         for(DBChargeItem i : manager.showListAll_charge()){
-            if(tab == 0){
-                temp_date = i.getDate();
-                tab++;
-            }else{
-                if(!temp_date.equals(i.getDate())){
-                    HashMap<String, String> map = new HashMap<String, String>();
-                    map.put("date" , temp_date);
-                    ChargeDayListItems.add(map);
+            if(name.equals(i.getName())){
+                if(tab == 0){
                     temp_date = i.getDate();
+                    tab++;
+                }else{
+                    if(!temp_date.equals(i.getDate())){
+                        HashMap<String, String> map = new HashMap<String, String>();
+                        map.put("date" , temp_date);
+                        ChargeDayListItems.add(map);
+                        temp_date = i.getDate();
+                    }
                 }
             }
         }
@@ -67,6 +72,7 @@ public class ChargeDayListActivity extends AppCompatActivity implements AdapterV
         //打开新的界面 activity_rate_calc.xml，传入参数
         Intent chargeItem = new Intent(this , ChargeDayItemActivity.class);
         chargeItem.putExtra("date", date);
+        chargeItem.putExtra("name", name);
         startActivity(chargeItem);
     }
 }

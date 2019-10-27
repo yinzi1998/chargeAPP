@@ -16,6 +16,7 @@ import java.util.HashMap;
 
 public class ChargeMonthItemActivity extends AppCompatActivity {
     private static final String TAG = "ChargeMonthItemActivity";
+    private String name;
     //存放每一天的金额
     private ArrayList<HashMap<String,String>> dayMoneyList = new ArrayList<>();
     private String date;
@@ -42,35 +43,38 @@ public class ChargeMonthItemActivity extends AppCompatActivity {
         setContentView(R.layout.activity_charge_month_item);
 
         Intent intent = getIntent();
+        name = intent.getStringExtra("name");
         date = intent.getStringExtra("date");
 
         for(DBChargeItem i : manager.showListAll_charge()){
-            if(date.split("-")[0].equals(i.getDate().split("-")[0]) && date.split("-")[1].equals(i.getDate().split("-")[1])){
-                money_total += Float.parseFloat(i.getMoney());
-                if(i.getType().equals("1")){
-                    money_chi += Float.parseFloat(i.getMoney());
-                }else if(i.getType().equals("2")){
-                    money_chuan += Float.parseFloat(i.getMoney());
-                }else{
-                    money_yong += Float.parseFloat(i.getMoney());
-                }
-                //计算每一天的花销
-                if(tab == 0){
-                    temp_day = i.getDate().split("-")[2];
-                    temp_dayMoney += Float.parseFloat(i.getMoney());
-                    tab++;
-                }else{
-                    if(temp_day.equals(i.getDate().split("-")[2])){
-                        temp_dayMoney += Float.parseFloat(i.getMoney());
-                        Log.i(TAG, "onCreate: 同一天加金额= " + temp_dayMoney);
+            if(name.equals(i.getName())){
+                if(date.split("-")[0].equals(i.getDate().split("-")[0]) && date.split("-")[1].equals(i.getDate().split("-")[1])){
+                    money_total += Float.parseFloat(i.getMoney());
+                    if(i.getType().equals("1")){
+                        money_chi += Float.parseFloat(i.getMoney());
+                    }else if(i.getType().equals("2")){
+                        money_chuan += Float.parseFloat(i.getMoney());
                     }else{
-                        HashMap<String, String> map = new HashMap<String, String>();
-                        map.put("date" ,temp_day);
-                        map.put("money" , String.valueOf(temp_dayMoney));
-                        dayMoneyList.add(map);
-                        Log.i(TAG, "onCreate: 不同天加map= " + temp_day + "天花" + temp_dayMoney);
-                        temp_dayMoney = Float.parseFloat(i.getMoney());
+                        money_yong += Float.parseFloat(i.getMoney());
+                    }
+                    //计算每一天的花销
+                    if(tab == 0){
                         temp_day = i.getDate().split("-")[2];
+                        temp_dayMoney += Float.parseFloat(i.getMoney());
+                        tab++;
+                    }else{
+                        if(temp_day.equals(i.getDate().split("-")[2])){
+                            temp_dayMoney += Float.parseFloat(i.getMoney());
+                            Log.i(TAG, "onCreate: 同一天加金额= " + temp_dayMoney);
+                        }else{
+                            HashMap<String, String> map = new HashMap<String, String>();
+                            map.put("date" ,temp_day);
+                            map.put("money" , String.valueOf(temp_dayMoney));
+                            dayMoneyList.add(map);
+                            Log.i(TAG, "onCreate: 不同天加map= " + temp_day + "天花" + temp_dayMoney);
+                            temp_dayMoney = Float.parseFloat(i.getMoney());
+                            temp_day = i.getDate().split("-")[2];
+                        }
                     }
                 }
             }

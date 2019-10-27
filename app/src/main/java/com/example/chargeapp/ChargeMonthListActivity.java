@@ -19,6 +19,7 @@ import java.util.HashMap;
 public class ChargeMonthListActivity extends AppCompatActivity implements AdapterView.OnItemClickListener{
 
     private static final String TAG = "MonthListActivity";
+    private String name;
     //用于存放月账单列表的数据
     private ArrayList<HashMap<String,String>> ChargeMonthListItems;
     private ListView listView;
@@ -28,6 +29,8 @@ public class ChargeMonthListActivity extends AppCompatActivity implements Adapte
         DBManager manager = new DBManager(ChargeMonthListActivity.this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_charge_month_list);
+        Intent intent = getIntent();
+        name = intent.getStringExtra("name");
         int tab = 0;
         String temp_month = "";
         String temp_year = "";
@@ -35,19 +38,21 @@ public class ChargeMonthListActivity extends AppCompatActivity implements Adapte
 
         ChargeMonthListItems = new ArrayList<HashMap<String, String>>();
         for(DBChargeItem i : manager.showListAll_charge()){
-            if(tab == 0){
-                temp_month = i.getDate().split("-")[1];
-                temp_year = i.getDate().split("-")[0];
-                temp_date = i.getDate();
-                tab++;
-            }else{
-                if((!temp_month.equals(i.getDate().split("-")[1])) || (!temp_year.equals(i.getDate().split("-")[0]))){
-                    HashMap<String, String> map = new HashMap<String, String>();
-                    map.put("date" , temp_date);
-                    ChargeMonthListItems.add(map);
+            if(name.equals(i.getName())){
+                if(tab == 0){
                     temp_month = i.getDate().split("-")[1];
                     temp_year = i.getDate().split("-")[0];
                     temp_date = i.getDate();
+                    tab++;
+                }else{
+                    if((!temp_month.equals(i.getDate().split("-")[1])) || (!temp_year.equals(i.getDate().split("-")[0]))){
+                        HashMap<String, String> map = new HashMap<String, String>();
+                        map.put("date" , temp_date);
+                        ChargeMonthListItems.add(map);
+                        temp_month = i.getDate().split("-")[1];
+                        temp_year = i.getDate().split("-")[0];
+                        temp_date = i.getDate();
+                    }
                 }
             }
         }
@@ -76,6 +81,7 @@ public class ChargeMonthListActivity extends AppCompatActivity implements Adapte
 
         //打开新的界面 activity_rate_calc.xml，传入参数
         Intent chargeItem = new Intent(this , ChargeMonthItemActivity.class);
+        chargeItem.putExtra("name", name);
         chargeItem.putExtra("date", date);
         startActivity(chargeItem);
     }

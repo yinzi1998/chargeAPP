@@ -35,6 +35,7 @@ public class DBManager {
     public void add_charge(DBChargeItem item){
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
+        values.put("NAME", item.getName());
         values.put("DATE", item.getDate());
         values.put("TYPE", item.getType());
         values.put("DETAIL", item.getDetail());
@@ -60,6 +61,7 @@ public class DBManager {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         for (DBChargeItem i : list){
             ContentValues values = new ContentValues();
+            values.put("NAME", i.getName());
             values.put("DATE", i.getDate());
             values.put("TYPE", i.getType());
             values.put("DETAIL", i.getDetail());
@@ -99,6 +101,7 @@ public class DBManager {
             while (cursor.moveToNext()){
                 DBChargeItem item = new DBChargeItem();
                 item.setId(cursor.getInt(cursor.getColumnIndex("ID")));
+                item.setName(cursor.getString(cursor.getColumnIndex("NAME")));
                 item.setDate(cursor.getString(cursor.getColumnIndex("DATE")));
                 item.setType(cursor.getString(cursor.getColumnIndex("TYPE")));
                 item.setDetail(cursor.getString(cursor.getColumnIndex("DETAIL")));
@@ -153,6 +156,7 @@ public class DBManager {
     public void update_charge(DBChargeItem item){
         SQLiteDatabase db = dbHelper.getReadableDatabase();
         ContentValues values = new ContentValues();
+        values.put("NAME", item.getName());
         values.put("DATE", item.getDate());
         values.put("TYPE", item.getType());
         values.put("DETAIL", item.getDetail());
@@ -185,6 +189,7 @@ public class DBManager {
         if(cursor!=null && cursor.moveToFirst()){
             item = new DBChargeItem();
             item.setId(cursor.getInt(cursor.getColumnIndex("ID")));
+            item.setName(cursor.getString(cursor.getColumnIndex("NAME")));
             item.setDate(cursor.getString(cursor.getColumnIndex("DATE")));
             item.setType(cursor.getString(cursor.getColumnIndex("TYPE")));
             item.setDetail(cursor.getString(cursor.getColumnIndex("DETAIL")));
