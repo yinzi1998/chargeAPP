@@ -27,15 +27,17 @@ public class AdapterListChargeDay extends ArrayAdapter {
         if(convertView == null){
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.list_item_charge_day , parent , false);
         }
-
         Map<String , String> map = (Map<String , String>)getItem(position);
         TextView date = convertView.findViewById(R.id.textView_dayitem_date);
 
         String[] todayList = map.get("date").split("-");
-        String year = todayList[0];
-        String month = todayList[1];
-        String day = todayList[2];
-        date.setText(year + " 年 " + month + " 月 " + day + " 日 ");
+        if(todayList.length>=3){
+            String year = todayList[0];
+            String month = todayList[1];
+            String day = todayList[2];
+            date.setText(year + " 年 " + month + " 月 " + day + " 日 ");
+        }
+
 
         return convertView;
     }

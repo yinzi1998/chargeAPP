@@ -56,7 +56,7 @@ public class ViewPg1Fragment extends Fragment {
         TextView tv_chuan3 = getView().findViewById(R.id.textView_viewpg1_chuan3);
         TextView tv_yong3 = getView().findViewById(R.id.textView_viewpg1_yong3);
 
-        tv_date.setText(year + " 年 " + month + " 月 " + day + " 日的账单 ");
+        tv_date.setText(year + "年" + month + "月" + day + "日的账单 ");
         tv_money2.setText(String.valueOf(totalMoney));
         tv_chi3.setText(String.valueOf(chiMoney));
         tv_chuan3.setText(String.valueOf(chuanMoney));

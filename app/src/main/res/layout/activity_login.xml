@@ -49,12 +49,12 @@
         android:id="@+id/editText_login_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginLeft="26dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginLeft="23dp"
         android:layout_marginTop="16dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="@string/login_name"
+        android:inputType="textPersonName"
         app:layout_constraintStart_toEndOf="@+id/imageView_login_name"
         app:layout_constraintTop_toBottomOf="@+id/imageView5" />
 
@@ -75,10 +75,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
         android:layout_marginLeft="26dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="30dp"
         android:ems="10"
-        android:inputType="textPassword"
         android:hint="@string/login_psw1"
+        android:inputType="textPassword"
         app:layout_constraintStart_toEndOf="@+id/imageView_login_psw1"
         app:layout_constraintTop_toBottomOf="@+id/editText_login_name" />
 
@@ -99,10 +99,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
         android:layout_marginLeft="26dp"
-        android:layout_marginTop="23dp"
+        android:layout_marginTop="26dp"
         android:ems="10"
-        android:inputType="textPassword"
         android:hint="@string/login_psw2"
+        android:inputType="textPassword"
         app:layout_constraintStart_toEndOf="@+id/imageView_login_psw2"
         app:layout_constraintTop_toBottomOf="@+id/editText_login_psw1" />
 
@@ -112,7 +112,7 @@
         android:layout_height="64dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:background="#00FF0000"

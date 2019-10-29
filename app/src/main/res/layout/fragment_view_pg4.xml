@@ -32,12 +32,12 @@
 
         <TextView
             android:id="@+id/textView_viewpg4_most1"
-            android:layout_width="20dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="66dp"
             android:layout_weight="1"
-            android:gravity="right"
+            android:gravity="center"
             android:text="你花销最多的是 "
             android:textColor="#212121"
             android:textSize="16dp" />
@@ -62,12 +62,12 @@
 
         <TextView
             android:id="@+id/textView_viewpg4_chi1"
-            android:layout_width="2dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="6dp"
             android:layout_weight="1"
-            android:gravity="right"
+            android:gravity="center"
             android:text="你在"
             android:textColor="#212121"
             android:textSize="16dp" />
@@ -82,8 +82,8 @@
 
         <TextView
             android:id="@+id/textView_viewpg4_chi2"
-            android:layout_width="83dp"
-            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:gravity="center"
@@ -93,7 +93,7 @@
 
         <TextView
             android:id="@+id/textView_viewpg4_chi3"
-            android:layout_width="37dp"
+            android:layout_width="79dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
@@ -122,12 +122,12 @@
 
         <TextView
             android:id="@+id/textView_viewpg4_chuan1"
-            android:layout_width="2dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="6dp"
             android:layout_weight="1"
-            android:gravity="right"
+            android:gravity="center"
             android:text="你在"
             android:textColor="#212121"
             android:textSize="16dp" />
@@ -142,8 +142,8 @@
 
         <TextView
             android:id="@+id/textView_viewpg4_chuan2"
-            android:layout_width="83dp"
-            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:gravity="center"
@@ -153,7 +153,7 @@
 
         <TextView
             android:id="@+id/textView_viewpg4_chuan3"
-            android:layout_width="37dp"
+            android:layout_width="77dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
@@ -182,12 +182,12 @@
 
         <TextView
             android:id="@+id/textView_viewpg4_yong1"
-            android:layout_width="2dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="6dp"
             android:layout_weight="1"
-            android:gravity="right"
+            android:gravity="center"
             android:text="你在"
             android:textColor="#212121"
             android:textSize="16dp" />
@@ -202,8 +202,8 @@
 
         <TextView
             android:id="@+id/textView_viewpg4_yong2"
-            android:layout_width="83dp"
-            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:gravity="center"
@@ -213,7 +213,7 @@
 
         <TextView
             android:id="@+id/textView_viewpg4_yong3"
-            android:layout_width="37dp"
+            android:layout_width="83dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
@@ -243,19 +243,19 @@
 
         <TextView
             android:id="@+id/textView_viewpg4_mostday1"
-            android:layout_width="107dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="6dp"
             android:layout_weight="1"
-            android:gravity="right"
+            android:gravity="center"
             android:text="花销最多的一天是"
             android:textColor="#212121"
             android:textSize="16dp" />
 
         <TextView
             android:id="@+id/textView_viewpg4_mostday2"
-            android:layout_width="86dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
@@ -266,7 +266,7 @@
 
         <TextView
             android:id="@+id/textView_viewpg4_mostday3"
-            android:layout_width="4dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
@@ -277,7 +277,7 @@
 
         <TextView
             android:id="@+id/textView_viewpg4_mostday4"
-            android:layout_width="56dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
@@ -306,19 +306,19 @@
 
         <TextView
             android:id="@+id/textView_viewpg4_leastday1"
-            android:layout_width="111dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="16dp"
+            android:layout_marginLeft="6dp"
             android:layout_weight="1"
-            android:gravity="right"
+            android:gravity="center"
             android:text="花销最少的一天是"
             android:textColor="#212121"
             android:textSize="16dp" />
 
         <TextView
             android:id="@+id/textView_viewpg4_leastday2"
-            android:layout_width="86dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
@@ -329,7 +329,7 @@
 
         <TextView
             android:id="@+id/textView_viewpg4_leastday3"
-            android:layout_width="4dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
@@ -340,7 +340,7 @@
 
         <TextView
             android:id="@+id/textView_viewpg4_leastday4"
-            android:layout_width="56dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"

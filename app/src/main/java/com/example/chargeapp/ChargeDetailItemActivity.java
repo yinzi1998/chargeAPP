@@ -44,7 +44,7 @@ public class ChargeDetailItemActivity extends AppCompatActivity {
         if(type.equals("1")){
             tv_Type.setText("吃饱了，才有力气学习！");
         }else if(type.equals("2")){
-            tv_Type.setText("买买衣服，把自己打扮一下！");
+            tv_Type.setText("买买衣服，打扮一下！");
         }else{
             tv_Type.setText("实用才是硬道理！");
         }

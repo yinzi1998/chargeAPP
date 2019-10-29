@@ -32,9 +32,14 @@ public class AdapterListChargeMonth extends ArrayAdapter {
         TextView date = convertView.findViewById(R.id.textView_monthitem_date);
 
         String[] todayList = map.get("date").split("-");
-        String year = todayList[0];
-        String month = todayList[1];
-        date.setText(year + " 年 " + month + " 月 ");
+        if(todayList.length>=2){
+            String year = todayList[0];
+            String month = todayList[1];
+            date.setText(year + " 年 " + month + " 月 ");
+        }
+
+
+
 
         return convertView;
     }

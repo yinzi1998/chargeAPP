@@ -1,6 +1,6 @@
 package com.example.chargeapp;
 
-//数据库的记账表的实体类，封装了ID，日期DATE，吃穿用类型TYPE，具体事项DETAIL，金额MONEY
+//数据库的记账表的实体类，封装了ID，用户名NAME，日期DATE，吃穿用类型TYPE，具体事项DETAIL，金额MONEY
 public class DBChargeItem {
     private  int id;
     private String name;

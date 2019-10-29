@@ -33,12 +33,12 @@
 
         <TextView
             android:id="@+id/textView_viewpg2_most1"
-            android:layout_width="20dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="66dp"
             android:layout_weight="1"
-            android:gravity="right"
+            android:gravity="center"
             android:text="你花销最多的是 "
             android:textColor="#212121"
             android:textSize="16dp" />
@@ -81,16 +81,16 @@
         android:layout_weight="1"
         android:src="@mipmap/chi" />
 
-    <TextView
-        android:id="@+id/textView_viewpg2_chi2"
-        android:layout_width="83dp"
-        android:layout_height="40dp"
-        android:layout_gravity="center"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:text="上花费的百分比为"
-        android:textColor="#212121"
-        android:textSize="16dp" />
+        <TextView
+            android:id="@+id/textView_viewpg2_chi2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="上花费的百分比为"
+            android:textColor="#212121"
+            android:textSize="16dp" />
 
     <TextView
         android:id="@+id/textView_viewpg2_chi3"
@@ -143,8 +143,8 @@
 
         <TextView
             android:id="@+id/textView_viewpg2_chuan2"
-            android:layout_width="83dp"
-            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:gravity="center"
@@ -203,8 +203,8 @@
 
         <TextView
             android:id="@+id/textView_viewpg2_yong2"
-            android:layout_width="83dp"
-            android:layout_height="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:gravity="center"

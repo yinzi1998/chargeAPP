@@ -47,14 +47,16 @@ public class ChargeDayListActivity extends AppCompatActivity implements AdapterV
             }
         }
         HashMap<String, String> map = new HashMap<String, String>();
-        map.put("date" , temp_date);
-        ChargeDayListItems.add(map);
+        if(temp_date!="" && temp_date!=null){
+            map.put("date" , temp_date);
+            ChargeDayListItems.add(map);
+        }
 
         listView = findViewById(R.id.ListView_charge_day);
-        AdapterListChargeDay adapterChargeDay = new AdapterListChargeDay(ChargeDayListActivity.this, R.layout.list_item_charge_day, ChargeDayListItems);
-        listView.setAdapter(adapterChargeDay);
         //没有数据的时候显示nodata的TextView
         listView.setEmptyView(findViewById(R.id.TextView_chargeday_nodata));
+        AdapterListChargeDay adapterChargeDay = new AdapterListChargeDay(ChargeDayListActivity.this, R.layout.list_item_charge_day, ChargeDayListItems);
+        listView.setAdapter(adapterChargeDay);
         //添加列表短按事件监听
         listView.setOnItemClickListener(ChargeDayListActivity.this);
     }

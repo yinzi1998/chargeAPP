@@ -56,11 +56,11 @@ public class ViewPg2Fragment extends Fragment {
         TextView tv_yong3 = getView().findViewById(R.id.textView_viewpg2_yong3);
         ImageView iv_most = getView().findViewById(R.id.imageView_viewpg2_most);
 
-        tv_date.setText(year + " 年 " + month + " 月 " + day + " 日的账单 ");
-        DecimalFormat decimalFormat=new DecimalFormat("0.00");
-        tv_chi3.setText(decimalFormat.format(chiMoney/totalMoney));
-        tv_chuan3.setText(decimalFormat.format(chuanMoney/totalMoney));
-        tv_yong3.setText(decimalFormat.format(yongMoney/totalMoney));
+        tv_date.setText(year + "年" + month + "月" + day + "日的账单 ");
+        DecimalFormat decimalFormat=new DecimalFormat("#");
+        tv_chi3.setText(decimalFormat.format(100*chiMoney/totalMoney));
+        tv_chuan3.setText(decimalFormat.format(100*chuanMoney/totalMoney));
+        tv_yong3.setText(decimalFormat.format(100*yongMoney/totalMoney));
         if(mostType == 1){
             iv_most.setImageResource(R.mipmap.chi);
         }else if(mostType == 2){

@@ -36,25 +36,25 @@
             android:id="@+id/imageView_viewpg1_money"
             android:layout_width="3dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="56dp"
+            android:layout_marginLeft="36dp"
             android:layout_marginTop="6dp"
             android:layout_weight="1"
             android:src="@mipmap/renminbi" />
 
         <TextView
             android:id="@+id/textView_viewpg1_money1"
-            android:layout_width="47dp"
+            android:layout_width="124dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:gravity="right"
-            android:text="你一共支出了  "
+            android:text="你一共支出了"
+            android:gravity="center"
             android:textColor="#212121"
             android:textSize="16dp" />
 
         <TextView
             android:id="@+id/textView_viewpg1_money2"
-            android:layout_width="7dp"
+            android:layout_width="52dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
@@ -87,9 +87,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="36dp"
+            android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:gravity="right"
+            android:gravity="center"
             android:text="你在"
             android:textColor="#212121"
             android:textSize="16dp" />
@@ -104,17 +104,18 @@
 
         <TextView
             android:id="@+id/textView_viewpg1_chi2"
-            android:layout_width="69dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:text="上一共花费了"
+            android:gravity="center"
             android:textColor="#212121"
             android:textSize="16dp" />
 
         <TextView
             android:id="@+id/textView_viewpg1_chi3"
-            android:layout_width="37dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
@@ -146,9 +147,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="36dp"
+            android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:gravity="right"
+            android:gravity="center"
             android:text="你在"
             android:textColor="#212121"
             android:textSize="16dp" />
@@ -163,17 +164,18 @@
 
         <TextView
             android:id="@+id/textView_viewpg1_chuan2"
-            android:layout_width="69dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:text="上一共花费了"
+            android:gravity="center"
             android:textColor="#212121"
             android:textSize="16dp" />
 
         <TextView
             android:id="@+id/textView_viewpg1_chuan3"
-            android:layout_width="37dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
@@ -205,9 +207,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="36dp"
+            android:layout_marginLeft="16dp"
             android:layout_weight="1"
-            android:gravity="right"
+            android:gravity="center"
             android:text="你在"
             android:textColor="#212121"
             android:textSize="16dp" />
@@ -222,17 +224,18 @@
 
         <TextView
             android:id="@+id/textView_viewpg1_yong2"
-            android:layout_width="69dp"
+            android:layout_width="106dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:text="上一共花费了"
+            android:gravity="center"
             android:textColor="#212121"
             android:textSize="16dp" />
 
         <TextView
             android:id="@+id/textView_viewpg1_yong3"
-            android:layout_width="37dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1"

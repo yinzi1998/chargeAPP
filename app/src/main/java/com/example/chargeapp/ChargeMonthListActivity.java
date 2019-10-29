@@ -57,14 +57,16 @@ public class ChargeMonthListActivity extends AppCompatActivity implements Adapte
             }
         }
         HashMap<String, String> map = new HashMap<String, String>();
-        map.put("date" , temp_date);
-        ChargeMonthListItems.add(map);
+        if(temp_date!="" && temp_date!=null){
+            map.put("date" , temp_date);
+            ChargeMonthListItems.add(map);
+        }
 
         listView = findViewById(R.id.ListView_charge_month);
-        AdapterListChargeMonth adapterChargeMonth = new AdapterListChargeMonth(ChargeMonthListActivity.this, R.layout.list_item_charge_month, ChargeMonthListItems);
-        listView.setAdapter(adapterChargeMonth);
         //没有数据的时候显示nodata的TextView
         listView.setEmptyView(findViewById(R.id.TextView_chargemonth_nodata));
+        AdapterListChargeMonth adapterChargeMonth = new AdapterListChargeMonth(ChargeMonthListActivity.this, R.layout.list_item_charge_month, ChargeMonthListItems);
+        listView.setAdapter(adapterChargeMonth);
         //添加列表短按事件监听
         listView.setOnItemClickListener(ChargeMonthListActivity.this);
     }

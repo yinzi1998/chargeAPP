@@ -68,11 +68,11 @@ public class ViewPg4Fragment extends Fragment {
         tv_leastday4.setText(String.valueOf(leastDayMoney));
         tv_mostday2.setText("本月" + mostDayDate + "日");
         tv_leastday2.setText("本月" + leastDayDate + "日");
-        tv_date.setText(year + " 年 " + month + " 月的账单 ");
-        DecimalFormat decimalFormat=new DecimalFormat("0.00");
-        tv_chi3.setText(decimalFormat.format(chiMoney/totalMoney));
-        tv_chuan3.setText(decimalFormat.format(chuanMoney/totalMoney));
-        tv_yong3.setText(decimalFormat.format(yongMoney/totalMoney));
+        tv_date.setText(year + "年" + month + "月的账单 ");
+        DecimalFormat decimalFormat=new DecimalFormat("#");
+        tv_chi3.setText(decimalFormat.format(100*chiMoney/totalMoney));
+        tv_chuan3.setText(decimalFormat.format(100*chuanMoney/totalMoney));
+        tv_yong3.setText(decimalFormat.format(100*yongMoney/totalMoney));
         if(mostType == 1){
             iv_most.setImageResource(R.mipmap.chi);
         }else if(mostType == 2){
