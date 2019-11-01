@@ -15,7 +15,7 @@ public class AdapterMonthViewPg extends FragmentPagerAdapter {
         super(manager);
     }
 
-    //管理显示滑动窗口下显示哪一个页面
+    //管理显示滑动窗口下显示哪个页面
     @NonNull
     @Override
     public Fragment getItem(int position) {
